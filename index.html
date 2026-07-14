@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McDonald's Style Website</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader">
+
+    <div class="loader-content">
+
+        <h1>🍟 McDonald's</h1>
+
+        <div class="spinner"></div>
+
+        <p>Preparing your order...</p>
+
+    </div>
+
+</div>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <h2>McDonald's</h2>
+        </div>
+<div class="menu-toggle" id="menuToggle">
+    ☰
+</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#offers">Offers</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">signup</a></li>
+        </ul>
+
+  
+
+
+        <button class="order-btn">Order Now</button>
+       
+    </nav>
+<div class="cart-icon">
+
+🛒 Cart
+
+<span id="cart-count">0</span>
+
+
+
+
+
+</div>
+   
+<div id="cart-panel" class="cart-panel">
+
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart">✖</button>
+    </div>
+
+    <div id="cart-items">
+        <p>Your cart is empty.</p>
+    </div>
+
+   <div class="cart-footer">
+
+    <div class="summary-row">
+        <span>Subtotal</span>
+        <span>$<span id="subtotal">0.00</span></span>
+    </div>
+
+    <div class="summary-row">
+        <span>Delivery</span>
+        <span>$<span id="delivery">2.99</span></span>
+    </div>
+
+    <div class="summary-row">
+        <span>Discount</span>
+        <span>-$<span id="discount">0.00</span></span>
+    </div>
+
+    <hr>
+
+    <div class="summary-row total-row">
+        <strong>Total</strong>
+        <strong>$<span id="cart-total">0.00</span></strong>
+    </div>
+
+    <input
+        type="text"
+        id="promo-code"
+        placeholder="Promo Code">
+
+    <button id="applyPromo">
+        Apply
+    </button>
+    <button id="clearCart" class="clear-btn">
+    Clear Cart
+</button>
+
+    <button
+class="checkout-btn"
+onclick="window.location.href='checkout.html'">
+
+Checkout
+
+</button>
+
+</div>
+</div>
+
+<!-- Hero Section -->
+
+<section id="home" class="hero">
+
+    <div class="hero-text">
+
+        <h3>I'm Lovin' It ❤️</h3>
+
+        <h1>
+            Enjoy Delicious <br>
+            Burgers Made <br>
+            Fresh Every Day
+        </h1>
+
+        <p>
+            Taste the world's favorite burgers,
+            crispy fries, refreshing drinks,
+            and much more.
+        </p>
+
+        <div class="buttons">
+            <button class="btn1">Order Now</button>
+            <button class="btn2">View Menu</button>
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="images/burger.png" alt="Burger">
+
+    </div>
+
+</section>
+
+<!-- Popular Menu -->
+
+<section id="menu" class="menu hidden">
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="search"
+            placeholder="🔍 Search menu...">
+    </div>
+  <div class="filter-buttons">
+
+        <button class="filter-btn active" data-category="all">All</button>
+
+        <button class="filter-btn" data-category="burger">Burgers</button>
+
+        <button class="filter-btn" data-category="fries">Fries</button>
+
+        <button class="filter-btn" data-category="drinks">Drinks</button>
+
+        <button class="filter-btn" data-category="nuggets">Nuggets</button>
+
+    </div>
+
+    <h2>Popular Menu</h2>
+
+    <div class="menu-container">
+
+       <div class="card" data-category="burger">
+            <span class="favorite" data-id="burger">🤍</span>
+
+            <img src="images/burger.png" alt="Burger">
+
+            <h3>Big Burger</h3>
+
+            <p>$7.99</p>
+
+          
+            <button
+class="add-cart"
+data-name="Big Burger"
+data-price="7.99"
+data-image="images/burger.png">
+Add To Cart
+
+<div class="rating-display">
+    ⭐⭐⭐⭐⭐
+    <span>(4.8)</span>
+</div>
+
+<div class="user-rating" data-id="burger">
+
+    <span class="star">☆</span>
+    <span class="star">☆</span>
+    <span class="star">☆</span>
+    <span class="star">☆</span>
+    <span class="star">☆</span>
+
+</div>
+
+</button>
+
+        </div>
+
+
+        <div class="card" data-category="fries">
+            <span class="favorite" data-id="fries">🤍</span>
+
+            <img src="images/fries.png" alt="Fries">
+
+            <h3>French Fries</h3>
+
+            <p>$3.99</p>
+
+       <button
+class="add-cart"
+data-name="French Fries"
+data-price="3.99"
+data-image="images/fries.png">
+Add To Cart
+
+
+<div class="rating-display">
+    ⭐⭐⭐⭐⭐
+    <span>(4.8)</span>
+</div>
+
+<div class="user-rating" data-id="fries">
+
+    <span class="star">☆</span>
+    <span class="star">☆</span>
+    <span class="star">☆</span>
+    <span class="star">☆</span>
+    <span class="star">☆</span>
+
+</div>
+
+</button>
+
+        </div>
+
+        <div class="card" data-category="drinks">
+            <span class="favorite" data-id="coke">🤍</span>
+
+            <img src="images/coke.png" alt="Coke">
+
+            <h3>Coca-Cola</h3>
+
+            <p>$2.49</p>
+
+          <button
+class="add-cart"
+data-name="Coca-Cola"
+data-price="2.49"
+data-image="images/coke.png">
+
+Add To Cart
+
+<div class="rating-display">
+    ⭐⭐⭐⭐⭐
+    <span>(4.8)</span>
+</div>
+
+<div class="user-rating" data-id="drinks">
+
+    <span class="star">☆</span>
+    <span class="star">☆</span>
+    <span class="star">☆</span>
+    <span class="star">☆</span>
+    <span class="star">☆</span>
+
+</div>
+
+</button>
+
+        </div>
+
+        <div class="card" data-category="nuggets">
+            <span class="favorite" data-id="nuggets">🤍</span>
+
+            <img src="images/nuggets.png" alt="Nuggets">
+
+            <h3>Chicken Nuggets</h3>
+
+            <p>$6.49</p>
+<button
+class="add-cart"
+data-name="Chicken Nuggets"
+data-price="6.49"
+data-image="images/nuggets.png">
+
+Add To Cart
+
+<div class="rating-display">
+    ⭐⭐⭐⭐⭐
+    <span>(4.8)</span>
+</div>
+
+<div class="user-rating" data-id="Nuggets">
+
+    <span class="star">☆</span>
+    <span class="star">☆</span>
+    <span class="star">☆</span>
+    <span class="star">☆</span>
+    <span class="star">☆</span>
+
+</div>
+
+</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Special Offer Section -->
+
+<section id="offers" class="offer hidden">
+
+    <div class="offer-text">
+
+        <h4>🔥 Special Offer</h4>
+
+        <h2>Get 50% OFF on Your First Order</h2>
+
+        <p>
+            Enjoy freshly prepared burgers, crispy fries,
+            and refreshing drinks made with quality ingredients.
+        </p>
+
+        <button>Order Now</button>
+
+    </div>
+
+    <div class="offer-image">
+
+        <img src="images/offer-burger.png" alt="Special Burger">
+
+    </div>
+
+</section>
+
+<!-- About Section -->
+
+<section id="about" class="about hidden">
+
+
+    <div class="about-image">
+
+        <img src="images/about.png" alt="About Us">
+
+    </div>
+
+    <div class="about-text">
+
+        <h2>About Us</h2>
+
+        <p>
+            We believe that every meal should be fresh,
+            delicious, and made with love. Since our
+            beginning, we've been serving quality burgers,
+            crispy fries, refreshing drinks, and friendly
+            service that keeps customers coming back.
+        </p>
+
+        <p>
+            Our mission is to deliver happiness through
+            every bite while maintaining the highest
+            standards of quality and cleanliness.
+        </p>
+
+        <button>Learn More</button>
+
+    </div>
+
+</section>
+
+<!-- Testimonials -->
+
+<section class="testimonials hidden">
+
+
+    <h2>What Our Customers Say</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial">
+
+            <p>"The burgers are always fresh and delicious. Highly recommended!"</p>
+
+            <h4>⭐⭐⭐⭐⭐</h4>
+
+            <span>- Sarah J.</span>
+
+        </div>
+
+        <div class="testimonial">
+
+            <p>"Fast delivery and amazing customer service. My favorite place!"</p>
+
+            <h4>⭐⭐⭐⭐⭐</h4>
+
+            <span>- Ali K.</span>
+
+        </div>
+
+        <div class="testimonial">
+
+            <p>"Best fries in town! I'll definitely order again."</p>
+
+            <h4>⭐⭐⭐⭐⭐</h4>
+
+            <span>- Emma R.</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="faq hidden">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="question">
+
+<h3>Do you offer home delivery?</h3>
+
+<p>Yes! We deliver seven days a week.</p>
+
+</div>
+
+<div class="question">
+
+<h3>What are your opening hours?</h3>
+
+<p>We are open from 9 AM to 11 PM every day.</p>
+
+</div>
+
+<div class="question">
+
+<h3>Can I order online?</h3>
+
+<p>Absolutely! Use our website or mobile app.</p>
+
+</div>
+
+</section>
+
+<!-- Contact Section -->
+
+<section id="contact" class="contact hidden">
+
+    <h2>Contact Us</h2>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <h3>Get In Touch</h3>
+
+            <p>📍 123 Burger Street, Food City</p>
+
+            <p>📞 +1 234 567 890</p>
+
+            <p>📧 info@burgerhub.com</p>
+
+            <p>🕒 Mon - Sun: 9:00 AM - 11:00 PM</p>
+
+        </div>
+
+        <div class="contact-form">
+
+            <form>
+
+                <input type="text" placeholder="Your Name">
+
+                <input type="email" placeholder="Your Email">
+
+                <textarea placeholder="Your Message"></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+<button id="topBtn">⬆</button>
+
+<section class="locations">
+
+    <h2>Find a McDonald's Near You</h2>
+
+    <p>Visit one of our restaurants.</p>
+
+    <div class="map">
+
+        <iframe
+            src="https://www.google.com/maps?q=McDonald's&output=embed"
+            loading="lazy">
+        </iframe>
+
+    </div>
+
+</section>
+
+<section class="newsletter">
+
+    <h2>Stay Updated</h2>
+
+    <p>Subscribe to receive our latest offers and promotions.</p>
+
+    <div class="newsletter-box">
+
+        <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Enter your email">
+
+        <button id="subscribeBtn">
+            Subscribe
+        </button>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+    <p>© 2026 Burger Hub. All Rights Reserved.</p>
+
+</footer>
+<script src="script.js"></script>
+<div id="toast"></div>
+</body>
+</html>

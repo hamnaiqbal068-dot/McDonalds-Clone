@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Checkout</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<section class="checkout">
+
+<h1>Checkout</h1>
+
+<form id="checkoutForm">
+
+<input
+type="text"
+id="name"
+placeholder="Full Name"
+required>
+
+<input
+type="tel"
+id="phone"
+placeholder="Phone Number"
+required>
+
+<textarea
+id="address"
+placeholder="Delivery Address"
+required></textarea>
+
+<h3>Payment Method</h3>
+
+<label>
+
+<input
+type="radio"
+name="payment"
+value="Cash on Delivery"
+checked>
+
+Cash on Delivery
+
+</label>
+
+<br><br>
+
+<label>
+
+<input
+type="radio"
+name="payment"
+value="Credit Card">
+
+Credit Card
+
+</label>
+
+<br><br>
+
+<button type="submit">
+
+Place Order
+
+</button>
+
+</form>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
